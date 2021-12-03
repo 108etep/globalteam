@@ -1,0 +1,243 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat',sans-serif;
+}
+
+.header{
+  max-width: 1920px;
+  background-image: url(../images/header-bg.png);
+  background-position: top right;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.container{
+  max-width: 1600px;
+  margin: 0px 155px ;
+
+}
+.header__inner{
+  padding-top: 50px;
+  
+}
+.header__top{
+display: flex;
+align-items: center;
+margin-bottom: 128px;
+&::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: rgba(127, 163, 234, 0.26);
+  filter: blur(120px);
+  top: -40%;
+  left: 90;
+}
+}
+.header__logo{
+  margin-right: auto;
+}
+.navmenu{
+  
+}
+.header__menu{
+  list-style: none;
+  display: flex;
+}
+.menu__item{
+  color: #1C2D5A;
+  font-weight: 500;
+  padding-right: 32px;
+  
+}
+.header__btn{
+  margin-left: 32px;
+}
+.sign {
+  padding: 24px 48px;
+  color: #1C2D5A;
+  border-radius: 40px;
+  font-weight: 700;
+  border: 1px solid #1C2D5A;
+  background-color: inherit;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  margin-right: 16px;
+}
+.reg{
+ padding: 24px 48px;
+ color: #fff;
+ border-radius: 40px;
+  font-weight: 700;
+  background-color: #39379F;
+  font-size: 16px;
+  font-family: 'Montserrat',sans-serif;
+  text-transform: uppercase;
+  box-shadow: 4px 4px 20px rgba(57, 55, 159, 0.53);
+}
+.header__content-title1{
+  width: 889px;
+  font-weight: 700;
+  font-size: 60px;
+  color: #1C2D5A;
+  font-family: 'Montserrat',sans-serif;
+  text-transform: uppercase;
+  &::before{
+    content: url(../images/bg-svg-1.svg);
+    position: absolute;
+    top: 150px;
+    left: 70px;
+  }
+}
+.header__content-title2{
+  font-weight: bold;
+  line-height: 121px;
+  font-size: 100px;
+  background: linear-gradient(90deg, rgba(249, 158, 74, 0.91) 0%, #F0C342 30%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 467px;
+  text-transform: uppercase;
+  
+  
+}
+.header__content-title3{
+  font-weight: 700;
+  font-size: 60px;
+  width: 750px;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px #A8AFC0;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 48px;
+  
+}
+.header__content-desc{
+  width: 566px;
+  margin-bottom: 64px;
+}
+.header__btn2{
+margin-bottom: 64px;
+}
+.sign-in{
+   background: linear-gradient(90deg, rgba(249, 158, 74, 0.91) 0%, #F0C342 30%);
+   color: #fff;
+   padding: 24px 36px;
+   border-radius: 40px;
+   border: none;
+   margin-right: 16px;
+   font-size: 16px;
+   text-transform: uppercase;
+   position: relative;
+   z-index: 2;
+   
+   &::before {
+     content: "";
+     position: absolute;
+     overflow: hide;
+     width: 300px;
+     height: 300px;
+     left: -129px;
+     top: 300px;
+     background: rgb(191 134 31);
+     filter: blur(200px);
+     z-index: -1;
+
+   }
+}
+.ref{
+  color: rgba(77, 102, 109, 1);
+  padding: 24px 36px;
+  border-radius: 40px;
+  background-color: inherit;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.header__quest{
+display: flex;
+align-items: center;
+}
+.header__quest-inner{
+  width: 363px;
+  height: 157px;
+  display: flex;
+  box-shadow: 4px 10px 30px rgba(194, 192, 192, 0.3);
+  background-repeat: 5px;
+}
+.header__quest-quality {
+  margin-left: auto;
+  display: flex;
+}
+ .quest__biscard {
+   padding: 24px 30px;
+   display: flex;
+   align-items: center;
+   
+ }
+ .card__title{
+   font-size: 14px;
+   font-weight: 700;
+   line-height: 17px;
+   text-transform: uppercase;
+   letter-spacing: 0.2em;
+   color: rgba(28, 45, 90, 1);
+
+ }
+.card__title-2{
+padding-bottom: 14px;
+font-weight: 500;
+color: rgba(28, 45, 90, 1);
+}
+.biscard__profile-info{
+  display: flex;
+  align-items: center;
+}
+.biscard__img{
+  margin-right: 17px;
+}
+.biscard__contacts{
+  margin-right: 35px;
+}
+.contacts__name,
+.contacts__mail,
+.contacts__tel{
+  display: flex;
+  padding-bottom: 8px;
+  text-align: center;
+  img {
+    padding-right: 8px;
+  }
+  p {
+    font-weight: 500;
+    font-size: 12px;
+
+  }
+}
+.contacts__mail,
+.contacts__tel{
+  a{
+    text-decoration: none;
+    color: rgba(28, 45, 90, 1);
+  }
+}
+.biscard__socnet{
+  display: grid;
+}
+.biscard__socnet-close {
+  padding-bottom: 16px;
+  cursor: pointer;
+
+}
+.biscard__socnet-img{
+  padding-bottom: 9px;
+  
+}
+
+.quality__item{
+  width: 210px;
+  text-align: center;
+  &:not(:last-child){
+    margin-right: 8px;  
+  }
+}
