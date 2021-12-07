@@ -11,8 +11,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="container">
+    <div class="decor">
+    <div class="yellow-circle__one"></div>
+    <div class="bg-svg2"></div>
+    <div class="green-circle"></div>
+  </div>
+  </div>
   <header class="header">
-    <div class="container">
+    <div class="container head_container">
       <div class="header__inner">
         <div class="header__top">
           <div class="header__logo">
@@ -43,7 +50,7 @@
           <button class="ref">что мы предлагаем</button>
         </div>
         <div class="header__quest">
-          <div class="header__quest-inner">
+          <div id="popup" class="header__quest-inner  on">
           <div class="quest__biscard">
             <div class="biscard__profile">
               <p class="card__title">Есть вопросы?</p>
@@ -69,7 +76,7 @@
               </div>
             </div>
             <div class="biscard__socnet">
-              <img class="biscard__socnet-close" src="images/socnet-img-1.svg" alt="">
+              <a href="#" class="biscard__socnet-close"><img  src="images/socnet-img-1.svg" alt=""></a>
               <a href=""><img class="biscard__socnet-img" src="images/socnet-img-2.svg" alt=""></a>
               <a href=""><img class="biscard__socnet-img" src="images/socnet-img-3.svg" alt=""></a>
               <a href=""><img class="biscard__socnet-img" src="images/socnet-img-4.svg" alt=""></a>
@@ -98,8 +105,39 @@
         </div>
       </div>
     </div>
-
   </header>
+  <section class="income">
+    <div class="container">
+      <div class="income__inner">
+        <div class="income__inner-img">
+          <a href="#">
+            <img class="income-img" src="images/income-img.png" alt="" >
+          </a>
+        </div>
+        <div class="income__inner-info">
+          <h1 class="info__title">получайте стабильный доход</h1> 
+          <p class="info__title-2">и повышайте качество жизни</p>
+          <p class="info__service">Мы предлагаем вам готовую систему запуска , ведения и развития онлайн-бизнеса с нуля.</p>
+          <span class="info__conditions">В неё входят: </span>
+          <ul class="info__list">
+            <li>эффективные инструменты интернет-маркетинга,</li>
+            <li>инновационные эко-продукты для здоровья,</li>
+            <li>система бизнес-обучения и личностного развития</li>
+          </ul>
+          <div class="info__inner-price">
+            <div class="price__baxes-month">
+            <h1 class="inner__price">500$</h1>
+             <span>в месяц</span>
+             </div>
+            <p class="inner__desc">Используя наш опыт и знания, вы сможете легко 
+                                    стать интернет-предпринимателем с доходностью 
+                                    от 500$ в месяц в нише эко-продуктов</p>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+  </section>
 
 
     <script src="js/main.min.js"></script>

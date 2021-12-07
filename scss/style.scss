@@ -2,22 +2,88 @@
   margin: 0;
   padding: 0;
   font-family: 'Montserrat',sans-serif;
+  
 }
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+    box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+  }
+
+  70% {
+    -moz-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+    box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+  }
+
+  100% {
+    -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+    box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+  }
+}
+body{
+overflow-x: hidden;
+}
+.decor{
+  position: relative;
+  height: 100%;
+  .yellow-circle__one{
+    &::before{
+      content:'';
+      position: absolute;
+      width: 500px;
+      height: 450px;
+      background: rgba(245, 206, 128, 0.55);
+      filter: blur(120px);
+      top: 720px;
+      left: -350px;
+      z-index: -1;
+    } 
+    
+  }
+  .bg-svg2{
+    &::before{
+      content: url(../images/bg-svg-2.svg);
+      position: absolute;
+      top: 883px;
+      left: 500px;
+    }
+  }
+  .green-circle{
+    &::after{
+      content:'';
+      position: absolute;
+      width: 554px;
+      height: 512px;
+      background: rgba(167, 205, 111, 0.38);
+      filter: blur(120px);
+      top: 880px;
+      left: 1475px;
+
+      z-index: -1;
+    }
+  }
+}
+
+
 
 .header{
   max-width: 1920px;
   background-image: url(../images/header-bg.png);
   background-position: top right;
   background-repeat: no-repeat;
-  height: 100vh;
+  
 }
 .container{
   max-width: 1600px;
   margin: 0px 155px ;
 
 }
+.head_container{
+  margin-bottom: 176px;
+}
 .header__inner{
   padding-top: 50px;
+  margin-bottom: 64px;
   
 }
 .header__top{
@@ -33,6 +99,7 @@ margin-bottom: 128px;
   filter: blur(120px);
   top: -40%;
   left: 90;
+  z-index: -1;
 }
 }
 .header__logo{
@@ -76,6 +143,7 @@ margin-bottom: 128px;
   font-family: 'Montserrat',sans-serif;
   text-transform: uppercase;
   box-shadow: 4px 4px 20px rgba(57, 55, 159, 0.53);
+      border: 1px solid rgba(57, 55, 159, 1);
 }
 .header__content-title1{
   width: 889px;
@@ -129,22 +197,8 @@ margin-bottom: 64px;
    margin-right: 16px;
    font-size: 16px;
    text-transform: uppercase;
-   position: relative;
-   z-index: 2;
    
-   &::before {
-     content: "";
-     position: absolute;
-     overflow: hide;
-     width: 300px;
-     height: 300px;
-     left: -129px;
-     top: 300px;
-     background: rgb(191 134 31);
-     filter: blur(200px);
-     z-index: -1;
-
-   }
+   
 }
 .ref{
   color: rgba(77, 102, 109, 1);
@@ -160,10 +214,11 @@ align-items: center;
 }
 .header__quest-inner{
   width: 363px;
-  height: 157px;
   display: flex;
   box-shadow: 4px 10px 30px rgba(194, 192, 192, 0.3);
   background-repeat: 5px;
+  background-color: #fff;
+  animation: pulse 1.5s infinite;
 }
 .header__quest-quality {
   margin-left: auto;
@@ -173,6 +228,7 @@ align-items: center;
    padding: 24px 30px;
    display: flex;
    align-items: center;
+  
    
  }
  .card__title{
@@ -224,6 +280,11 @@ color: rgba(28, 45, 90, 1);
 .biscard__socnet{
   display: grid;
 }
+.on{
+  display: block;
+  transform: translateX(-200vh);
+  transition: all .5s;
+}
 .biscard__socnet-close {
   padding-bottom: 16px;
   cursor: pointer;
@@ -240,4 +301,91 @@ color: rgba(28, 45, 90, 1);
   &:not(:last-child){
     margin-right: 8px;  
   }
+}
+.income__inner{
+ display: flex;
+ align-items: center;
+}
+.income__inner-img{
+  margin-right: 53px;
+  margin-left: auto;
+}
+.income__inner-info{
+  
+}
+.info__title{
+  max-width: 564px;
+  height: 100%;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  text-transform: uppercase;
+  color: rgba(28, 45, 90, 1);
+}
+.info__title-2{
+  max-width: 563px;
+  height: 26px;
+  color: #1C2D5A;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 64px;
+}
+.info__service{
+  max-width: 561px;
+  height: 40px;
+  font-size: 16px;
+  margin-bottom: 24px;
+  color: #1C2D5A;
+}
+.info__conditions{
+  font-size: 16px;
+  line-height: 20px;
+  color: #1C2D5A;
+  font-size: 16px;
+  
+}
+.info__list{
+  list-style: none;
+  margin-bottom: 32px;
+  li{
+   
+    margin-bottom: 18px;
+    &::before{
+      content: url(../images/list-point.png);
+      margin-right: 8px;
+      top: 2px;
+      position: relative;
+    }
+  }
+}
+.info__inner-price{
+  display: flex;
+  
+}
+.inner__price{
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 73px;
+  color: #1C2D5A;
+  margin-right: 39px;
+}
+.inner__desc{
+  color: #1C2D5A;
+  font-size: 16px;
+  line-height: 20px;
+  height: 60px;
+  padding-top: 21px;
+  margin-left: 18px;
+  
+}
+.price__baxes-month {
+  border-right: 1px solid rgba(28, 45, 90, 0.12);
+  span{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    text-transform: uppercase;
+    color: #1C2D5A;
+    }
 }
